@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN" monitorInterval="30">
+
+    <!-- Define Properties for Reusability -->
+    <Properties>
+        <!-- Log File Name -->
+        <Property name="logFileName">logs/automation-project.log</Property>
+        
+        <!-- Log File Pattern for Archived Logs -->
+        <Property name="logFilePattern">logs/automation-project-%d{yyyy-MM-dd}-%i.log.gz</Property>
+        
+        <!-- Log Pattern -->
+        <Property name="logPattern">%d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %logger{36} - %msg%n</Property>
+    </Properties>
+
+    <!-- Define Appenders -->
+    <Appenders>
+        <!-- RollingFile Appender -->
+        <RollingFile name="RollingFileAppender" fileName="${logFileName}" filePattern="${logFilePattern}">
+            <PatternLayout>
+                <Pattern>${logPattern}</Pattern>
+            </PatternLayout>
+            <Policies>
+                <!-- Time-Based Trigger (Daily Rotation) -->
+                <TimeBasedTriggeringPolicy interval="1" modulate="true" />
+                
+                <!-- Size-Based Trigger (10MB Rotation) -->
+                <SizeBasedTriggeringPolicy size="10MB" />
+            </Policies>
+            <!-- Rollover Strategy to Retain Maximum of 10 Archived Files -->
+            <DefaultRolloverStrategy max="10" />
+        </RollingFile>
+
+        <!-- Console Appender for Immediate Output -->
+        <Console name="ConsoleAppender" target="SYSTEM_OUT">
+            <PatternLayout>
+                <Pattern>${logPattern}</Pattern>
+            </PatternLayout>
+        </Console>
+    </Appenders>
+
+    <!-- Define Loggers -->
+    <Loggers>
+        <!-- Root Logger (Controls Log Levels for All Classes) -->
+        <Root level="INFO">
+            <AppenderRef ref="RollingFileAppender" />
+            <AppenderRef ref="ConsoleAppender" />
+        </Root>
+    </Loggers>
+
+</Configuration>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ExtentReportManager.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">UIAndAPIAutomationFramework</a> &gt; <a href="index.source.html" class="el_package">ExtentReportUtility</a> &gt; <span class="el_source">ExtentReportManager.java</span></div><h1>ExtentReportManager.java</h1><pre class="source lang-java linenums">package ExtentReportUtility;
+
+import java.io.File;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+
+public final class ExtentReportManager {
+
+	private static ExtentReportManager extentReportInstance;
+<span class="fc" id="L14">	private static ThreadLocal&lt;ExtentTest&gt; extentTestThread = new ThreadLocal&lt;&gt;();</span>
+	private static ExtentReports extentReports;
+
+	private ExtentReportManager() {
+	}
+
+	public static synchronized ExtentReportManager getExtentReportInstance() {
+<span class="fc bfc" id="L21" title="All 2 branches covered.">		if (extentReportInstance == null) {</span>
+<span class="fc" id="L22">			extentReportInstance = new ExtentReportManager();</span>
+		}
+<span class="fc" id="L24">		return extentReportInstance;</span>
+	}
+
+	public void setUpExtentReport() {
+<span class="pc bpc" id="L28" title="1 of 2 branches missed.">		if (extentReports == null) {</span>
+			// Ensure the &quot;ExtentReports&quot; folder inside the &quot;test-output&quot; directory exists
+<span class="fc" id="L30">			File reportDir = new File(System.getProperty(&quot;user.dir&quot;) + &quot;/test-output/ExtentReports/&quot;);</span>
+<span class="pc bpc" id="L31" title="1 of 2 branches missed.">			if (!reportDir.exists()) {</span>
+<span class="nc" id="L32">				reportDir.mkdirs(); // Create the &quot;ExtentReports&quot; folder if it doesn't exist</span>
+			}
+
+			// Initialize ExtentSparkReporter
+<span class="fc" id="L36">			String reportPath = reportDir + &quot;/ExtentReport_&quot; + retriveDateAndTime() + &quot;.html&quot;;</span>
+<span class="fc" id="L37">			System.out.println(&quot;Report Path: &quot; + reportPath); // Debugging line</span>
+<span class="fc" id="L38">			ExtentSparkReporter sparkReporter = new ExtentSparkReporter(reportPath);</span>
+<span class="fc" id="L39">			sparkReporter.config().setDocumentTitle(&quot;Automation Test Report&quot;);</span>
+<span class="fc" id="L40">			sparkReporter.config().setReportName(&quot;Execution Report&quot;);</span>
+
+			// Initialize ExtentReports
+<span class="fc" id="L43">			extentReports = new ExtentReports();</span>
+<span class="fc" id="L44">			extentReports.attachReporter(sparkReporter);</span>
+<span class="fc" id="L45">			extentReports.setSystemInfo(&quot;Environment&quot;, &quot;QA-UAT&quot;);</span>
+		}
+<span class="fc" id="L47">	}</span>
+
+	public void createTest(String testCaseName, String groups, String author) {
+<span class="pc bpc" id="L50" title="1 of 2 branches missed.">		if (extentReports == null) {</span>
+<span class="nc" id="L51">			throw new IllegalStateException(&quot;ExtentReports is not initialized. Call setUpExtentReport() first.&quot;);</span>
+		}
+<span class="fc" id="L53">		ExtentTest test = extentReports.createTest(testCaseName).assignCategory(groups).assignAuthor(author);</span>
+<span class="fc" id="L54">		extentTestThread.set(test);</span>
+<span class="fc" id="L55">	}</span>
+
+	public ExtentTest getCurrentTest() {
+<span class="fc" id="L58">		ExtentTest test = extentTestThread.get();</span>
+<span class="pc bpc" id="L59" title="1 of 2 branches missed.">		if (test == null) {</span>
+<span class="nc" id="L60">			throw new IllegalStateException(&quot;No test is associated with the current thread.&quot;);</span>
+		}
+<span class="fc" id="L62">		return test;</span>
+	}
+
+	public void flushReports() {
+<span class="pc bpc" id="L66" title="1 of 2 branches missed.">		if (extentReports != null) {</span>
+<span class="fc" id="L67">			extentReports.flush();</span>
+		}
+<span class="fc" id="L69">	}</span>
+
+	private String retriveDateAndTime() {
+<span class="fc" id="L72">		SimpleDateFormat formatter = new SimpleDateFormat(&quot;yyyy-MM-dd_HH-mm-ss&quot;);</span>
+<span class="fc" id="L73">		return formatter.format(new Date());</span>
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

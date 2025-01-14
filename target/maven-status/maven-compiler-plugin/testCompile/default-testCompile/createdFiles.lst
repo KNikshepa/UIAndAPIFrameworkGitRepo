@@ -1,0 +1,8 @@
+UITests\MvnParameterTest.class
+CorrpFilecheck.class
+DataProviderUtility\DataProviderUtility.class
+ListenerUtility\TestListener.class
+UITests\DataProviderTest.class
+BaseTest\BaseTest.class
+DataProviderUtility\ExcelUtils.class
+UITests\AmazonDropdown.class

@@ -1,0 +1,8 @@
+ActionsUtility\ActionsUtility.class
+ConfigurationUtility\ConfigEnumUtility.class
+ExtentReportUtility\ExtentReportManager.class
+WebDriverUtility\DriverManager.class
+ConfigurationUtility\ConfigurationManager.class
+ConstantUtility\ConstantUtility.class
+POMOfUI\AmazonPage.class
+ScreenshotUtility\ScreenshotUtility.class

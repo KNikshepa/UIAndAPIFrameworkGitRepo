@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-01-14T20:42:14 IST" name="Suite" finished-at="2025-01-14T20:43:25 IST" duration-ms="70804">
+    <groups>
+    </groups>
+    <test started-at="2025-01-14T20:42:14 IST" name="Test" finished-at="2025-01-14T20:43:25 IST" duration-ms="70804">
+      <class name="UITests.AmazonDropdown">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:UITests.AmazonDropdown@3fffff43]" started-at="2025-01-14T20:42:15 IST" name="setUp" finished-at="2025-01-14T20:42:28 IST" duration-ms="13017" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:UITests.AmazonDropdown@3fffff43]" started-at="2025-01-14T20:42:15 IST" name="setUp" finished-at="2025-01-14T20:42:28 IST" duration-ms="12736" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:UITests.AmazonDropdown@3fffff43]" started-at="2025-01-14T20:42:15 IST" name="setUp" finished-at="2025-01-14T20:42:28 IST" duration-ms="12998" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="AmazonDropdown2()[pri:0, instance:UITests.AmazonDropdown@3fffff43]" started-at="2025-01-14T20:42:28 IST" name="AmazonDropdown2" finished-at="2025-01-14T20:43:21 IST" duration-ms="52759" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AmazonDropdown2 -->
+        <test-method signature="AmazonDropdown()[pri:0, instance:UITests.AmazonDropdown@3fffff43]" started-at="2025-01-14T20:42:28 IST" name="AmazonDropdown" description="Test case 1" finished-at="2025-01-14T20:43:21 IST" duration-ms="52504" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AmazonDropdown -->
+        <test-method signature="AmazonDropdown1()[pri:0, instance:UITests.AmazonDropdown@3fffff43]" started-at="2025-01-14T20:42:28 IST" name="AmazonDropdown1" finished-at="2025-01-14T20:43:21 IST" duration-ms="52486" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AmazonDropdown1 -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:UITests.AmazonDropdown@3fffff43]" started-at="2025-01-14T20:43:21 IST" name="tearDown" finished-at="2025-01-14T20:43:25 IST" duration-ms="4599" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:UITests.AmazonDropdown@3fffff43]" started-at="2025-01-14T20:43:21 IST" name="tearDown" finished-at="2025-01-14T20:43:25 IST" duration-ms="4350" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:UITests.AmazonDropdown@3fffff43]" started-at="2025-01-14T20:43:21 IST" name="tearDown" finished-at="2025-01-14T20:43:22 IST" duration-ms="1644" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- UITests.AmazonDropdown -->
+      <class name="UITests.MvnParameterTest">
+        <test-method signature="test()[pri:0, instance:UITests.MvnParameterTest@a8e6492]" started-at="2025-01-14T20:43:22 IST" name="test" finished-at="2025-01-14T20:43:22 IST" duration-ms="16" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test -->
+      </class> <!-- UITests.MvnParameterTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

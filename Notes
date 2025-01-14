@@ -1,0 +1,10 @@
+ String suiteXmlFile = System.getProperty("suiteXmlFile");
+        String param1 = System.getProperty("param1");
+        String param2 = System.getProperty("param2");
+
+        System.out.println("Suite XML File: " + suiteXmlFile);
+        System.out.println("param1: " + param1);
+        System.out.println("param2: " + param2);
+        
+        mvn test -DsuiteXmlFile=src/test/resources/testng1 -Dparam1=value1 -Dparam2=value2
+        

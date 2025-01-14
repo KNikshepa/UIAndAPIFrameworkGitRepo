@@ -1,0 +1,56 @@
+2025-01-14 17:19:19 [TestNG-test-Test-1] INFO  ActionsUtility.ActionsUtility - Value: Iphone has been sent to the field Search Box
+2025-01-14 17:19:19 [TestNG-test-Test-3] INFO  ActionsUtility.ActionsUtility - Value: Lipstick has been sent to the field Search Box
+2025-01-14 17:19:19 [TestNG-test-Test-2] INFO  ActionsUtility.ActionsUtility - Value: Silppers has been sent to the field Search Box
+2025-01-14 17:29:27 [TestNG-test-Test-2] INFO  ActionsUtility.ActionsUtility - Value: Silppers has been sent to the field Search Box
+2025-01-14 17:29:27 [TestNG-test-Test-1] INFO  ActionsUtility.ActionsUtility - Value: Iphone has been sent to the field Search Box
+2025-01-14 17:29:27 [TestNG-test-Test-3] INFO  ActionsUtility.ActionsUtility - Value: Lipstick has been sent to the field Search Box
+2025-01-14 17:39:23 [TestNG-test-Test-2] INFO  ActionsUtility.ActionsUtility - Value: Silppers has been sent to the field Search Box
+2025-01-14 17:39:23 [TestNG-test-Test-3] INFO  ActionsUtility.ActionsUtility - Value: Lipstick has been sent to the field Search Box
+2025-01-14 17:39:23 [TestNG-test-Test-1] INFO  ActionsUtility.ActionsUtility - Value: Iphone has been sent to the field Search Box
+2025-01-14 17:41:14 [TestNG-test-Test-1] INFO  ActionsUtility.ActionsUtility - Value: Iphone has been sent to the field Search Box
+2025-01-14 17:41:14 [TestNG-test-Test-3] INFO  ActionsUtility.ActionsUtility - Value: Lipstick has been sent to the field Search Box
+2025-01-14 17:41:14 [TestNG-test-Test-2] INFO  ActionsUtility.ActionsUtility - Value: Silppers has been sent to the field Search Box
+2025-01-14 17:50:17 [TestNG-test-Test-3] INFO  ActionsUtility.ActionsUtility - Value: Lipstick has been sent to the field Search Box
+2025-01-14 17:50:17 [TestNG-test-Test-1] INFO  ActionsUtility.ActionsUtility - Value: Iphone has been sent to the field Search Box
+2025-01-14 17:50:17 [TestNG-test-Test-2] INFO  ActionsUtility.ActionsUtility - Value: Silppers has been sent to the field Search Box
+2025-01-14 17:51:17 [TestNG-test-Test-1] ERROR ActionsUtility.ActionsUtility - Unable to send the value into input box
+2025-01-14 17:51:17 [TestNG-test-Test-3] ERROR ActionsUtility.ActionsUtility - Unable to send the value into input box
+2025-01-14 17:51:17 [TestNG-test-Test-2] ERROR ActionsUtility.ActionsUtility - Unable to send the value into input box
+2025-01-14 17:52:27 [TestNG-test-Test-3] INFO  ActionsUtility.ActionsUtility - Value: Lipstick has been sent to the field Search Box
+2025-01-14 17:52:27 [TestNG-test-Test-1] INFO  ActionsUtility.ActionsUtility - Value: Iphone has been sent to the field Search Box
+2025-01-14 17:52:27 [TestNG-test-Test-2] INFO  ActionsUtility.ActionsUtility - Value: Silppers has been sent to the field Search Box
+2025-01-14 18:03:11 [TestNG-test-Test-1] INFO  ActionsUtility.ActionsUtility - Value: Iphone has been sent to the field Search Box
+2025-01-14 18:03:11 [TestNG-test-Test-2] INFO  ActionsUtility.ActionsUtility - Value: Silppers has been sent to the field Search Box
+2025-01-14 18:03:12 [TestNG-test-Test-3] INFO  ActionsUtility.ActionsUtility - Value: Lipstick has been sent to the field Search Box
+2025-01-14 18:11:35 [TestNG-test-Test-2] INFO  ActionsUtility.ActionsUtility - Value: Silppers has been sent to the field Search Box
+2025-01-14 18:11:35 [TestNG-test-Test-1] INFO  ActionsUtility.ActionsUtility - Value: Iphone has been sent to the field Search Box
+2025-01-14 18:11:35 [TestNG-test-Test-3] INFO  ActionsUtility.ActionsUtility - Value: Lipstick has been sent to the field Search Box
+2025-01-14 18:24:04 [TestNG-test-Test-1] INFO  ActionsUtility.ActionsUtility - Value: Iphone has been sent to the field Search Box
+2025-01-14 18:24:04 [TestNG-test-Test-2] INFO  ActionsUtility.ActionsUtility - Value: Silppers has been sent to the field Search Box
+2025-01-14 18:24:04 [TestNG-test-Test-3] INFO  ActionsUtility.ActionsUtility - Value: Lipstick has been sent to the field Search Box
+2025-01-14 18:31:39 [TestNG-test-Test-3] INFO  ActionsUtility.ActionsUtility - Value: Lipstick has been sent to the field Search Box
+2025-01-14 18:31:39 [TestNG-test-Test-1] INFO  ActionsUtility.ActionsUtility - Value: Iphone has been sent to the field Search Box
+2025-01-14 18:31:39 [TestNG-test-Test-2] INFO  ActionsUtility.ActionsUtility - Value: Silppers has been sent to the field Search Box
+2025-01-14 19:15:44 [TestNG-test-Test-3] INFO  ActionsUtility.ActionsUtility - Value: Lipstick has been sent to the field Search Box
+2025-01-14 19:15:44 [TestNG-test-Test-1] INFO  ActionsUtility.ActionsUtility - Value: Iphone has been sent to the field Search Box
+2025-01-14 19:15:44 [TestNG-test-Test-2] INFO  ActionsUtility.ActionsUtility - Value: Silppers has been sent to the field Search Box
+2025-01-14 19:16:46 [TestNG-test-Test-3] ERROR ActionsUtility.ActionsUtility - Unable to send the value into input box
+2025-01-14 19:16:46 [TestNG-test-Test-2] ERROR ActionsUtility.ActionsUtility - Unable to send the value into input box
+2025-01-14 19:18:43 [TestNG-test-Test-2] INFO  ActionsUtility.ActionsUtility - Value: Silppers has been sent to the field Search Box
+2025-01-14 19:18:43 [TestNG-test-Test-3] INFO  ActionsUtility.ActionsUtility - Value: Lipstick has been sent to the field Search Box
+2025-01-14 19:18:43 [TestNG-test-Test-1] INFO  ActionsUtility.ActionsUtility - Value: Iphone has been sent to the field Search Box
+2025-01-14 19:20:38 [TestNG-test-Test-2] INFO  ActionsUtility.ActionsUtility - Value: Silppers has been sent to the field Search Box
+2025-01-14 19:20:38 [TestNG-test-Test-1] INFO  ActionsUtility.ActionsUtility - Value: Iphone has been sent to the field Search Box
+2025-01-14 19:20:38 [TestNG-test-Test-3] INFO  ActionsUtility.ActionsUtility - Value: Lipstick has been sent to the field Search Box
+2025-01-14 19:35:30 [TestNG-test-Test-2] INFO  ActionsUtility.ActionsUtility - Value: Silppers has been sent to the field Search Box
+2025-01-14 19:35:30 [TestNG-test-Test-1] INFO  ActionsUtility.ActionsUtility - Value: Iphone has been sent to the field Search Box
+2025-01-14 19:35:30 [TestNG-test-Test-3] INFO  ActionsUtility.ActionsUtility - Value: Lipstick has been sent to the field Search Box
+2025-01-14 19:41:21 [TestNG-test-Test-3] INFO  ActionsUtility.ActionsUtility - Value: Lipstick has been sent to the field Search Box
+2025-01-14 19:41:21 [TestNG-test-Test-2] INFO  ActionsUtility.ActionsUtility - Value: Silppers has been sent to the field Search Box
+2025-01-14 19:41:21 [TestNG-test-Test-1] INFO  ActionsUtility.ActionsUtility - Value: Iphone has been sent to the field Search Box
+2025-01-14 19:52:03 [TestNG-test-Test-3] INFO  ActionsUtility.ActionsUtility - Value: Lipstick has been sent to the field Search Box
+2025-01-14 19:52:03 [TestNG-test-Test-1] INFO  ActionsUtility.ActionsUtility - Value: Iphone has been sent to the field Search Box
+2025-01-14 19:52:03 [TestNG-test-Test-2] INFO  ActionsUtility.ActionsUtility - Value: Silppers has been sent to the field Search Box
+2025-01-14 20:43:20 [TestNG-test-Test-2] INFO  ActionsUtility.ActionsUtility - Value: Silppers has been sent to the field Search Box
+2025-01-14 20:43:20 [TestNG-test-Test-3] INFO  ActionsUtility.ActionsUtility - Value: Lipstick has been sent to the field Search Box
+2025-01-14 20:43:20 [TestNG-test-Test-1] INFO  ActionsUtility.ActionsUtility - Value: Iphone has been sent to the field Search Box
