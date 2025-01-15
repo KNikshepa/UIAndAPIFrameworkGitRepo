@@ -5,7 +5,7 @@ pipeline {
         // Define the SonarQube server URL and authentication token
         SONARQUBE_URL = 'http://localhost:9000' // SonarQube server URL
         SONARQUBE_TOKEN = credentials('SonarQubeToken') // SonarQube Jenkins credentials ID
-        GIT_TOKEN = credentials('Githubtoken') // GitHub token stored in Jenkins
+        GIT_TOKEN = credentials('GitHubTokenForAccess') // GitHub token stored in Jenkins
     }
 
     stages {
