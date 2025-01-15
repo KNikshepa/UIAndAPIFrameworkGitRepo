@@ -6,7 +6,8 @@ pipeline {
         SONARQUBE_URL = 'http://localhost:9000'
         SONARQUBE_TOKEN = credentials('SonarQubeToken')
         GIT_TOKEN = credentials('Githubtoken')
-        EMAIL_RECIPIENTS = 'recipient@example.com' // Replace with the desired email address
+        // Global environment variable for email
+        EMAIL_RECIPIENTS = 'learn2621@gmail.com'  // Can also be referenced globally if set in Jenkins' Global Configuration
     }
 
     stages {
@@ -67,7 +68,7 @@ pipeline {
                 <p>For more details, check the Jenkins console output at <a href="${env.BUILD_URL}">${env.BUILD_URL}</a>.</p>
                 <p>Regards,<br>Automated Jenkins Build</p>
                 """,
-                to: "${EMAIL_RECIPIENTS}",
+                to: "${EMAIL_RECIPIENTS}",  // Uses the globally defined environment variable
                 attachLog: true, // Attach the Jenkins console log to the email
                 attachmentsPattern: '**/target/*.html' // Attach build report (update this path if necessary)
             )
@@ -83,7 +84,7 @@ pipeline {
                 <p>For more details, check the Jenkins console output at <a href="${env.BUILD_URL}">${env.BUILD_URL}</a>.</p>
                 <p>Regards,<br>Automated Jenkins Build</p>
                 """,
-                to: "${EMAIL_RECIPIENTS}",
+                to: "${EMAIL_RECIPIENTS}",  // Uses the globally defined environment variable
                 attachLog: true
             )
         }
