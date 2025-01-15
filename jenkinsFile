@@ -5,14 +5,14 @@ pipeline {
         // Define the SonarQube server URL and authentication token
         SONARQUBE_URL = 'http://localhost:9000' // SonarQube server URL
         SONARQUBE_TOKEN = credentials('SonarQubeToken') // SonarQube Jenkins credentials ID
-        SONARQUBE_PROJECT_KEY = 'UIAndAPIAutomationWithSonar' // SonarQube project key
+        GIT_TOKEN = credentials('Githubtoken') // GitHub token stored in Jenkins
     }
 
     stages {
         stage('Checkout') {
             steps {
-                // Checkout the repository from GitHub
-                git branch: 'master', url: 'https://github.com/KNikshepa/UIAndAPIFrameworkGitRepo.git'
+                // Checkout the repository from GitHub using the GitHub token
+                git credentialsId: 'GitHubToken', url: 'https://github.com/KNikshepa/UIAndAPIFrameworkGitRepo.git', branch: 'master'
             }
         }
 
@@ -28,7 +28,7 @@ pipeline {
                 script {
                     // Run SonarQube analysis using the Jenkins-managed SonarQube server
                     withSonarQubeEnv('SonarQube') {
-                        sh "mvn clean verify sonar:sonar -Dsonar.projectKey=${SONARQUBE_PROJECT_KEY} -Dsonar.host.url=$SONARQUBE_URL -Dsonar.login=$SONARQUBE_TOKEN"
+                        sh 'mvn clean verify sonar:sonar -Dsonar.projectKey=UIAndAPIAutomationWithSonar -Dsonar.host.url=$SONARQUBE_URL -Dsonar.login=$SONARQUBE_TOKEN'
                     }
                 }
             }
