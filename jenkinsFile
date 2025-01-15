@@ -12,14 +12,14 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Checkout the repository from GitHub using the GitHub token
-                git credentialsId: 'GitHubToken', url: 'https://github.com/KNikshepa/UIAndAPIFrameworkGitRepo.git', branch: 'master'
+                git credentialsId: 'Githubtoken', url: 'https://github.com/KNikshepa/UIAndAPIFrameworkGitRepo.git', branch: 'master'
             }
         }
 
         stage('Build') {
             steps {
-                // Run Maven to build your project
-                sh 'mvn clean install'
+                // Run Maven to build your project (use 'bat' for Windows)
+                bat 'mvn clean install'
             }
         }
 
@@ -28,7 +28,7 @@ pipeline {
                 script {
                     // Run SonarQube analysis using the Jenkins-managed SonarQube server
                     withSonarQubeEnv('SonarQube') {
-                        sh 'mvn clean verify sonar:sonar -Dsonar.projectKey=UIAndAPIAutomationWithSonar -Dsonar.host.url=$SONARQUBE_URL -Dsonar.login=$SONARQUBE_TOKEN'
+                        bat 'mvn clean verify sonar:sonar -Dsonar.projectKey=UIAndAPIAutomationWithSonar -Dsonar.host.url=$SONARQUBE_URL -Dsonar.login=$SONARQUBE_TOKEN'
                     }
                 }
             }
@@ -36,8 +36,8 @@ pipeline {
 
         stage('Test') {
             steps {
-                // Run your tests (Selenium or API tests)
-                sh 'mvn test'
+                // Run your tests (Selenium or API tests) on Windows
+                bat 'mvn test'
             }
         }
 
@@ -45,22 +45,19 @@ pipeline {
             steps {
                 // Deploy the application if required (adjust as needed)
                 echo 'Deploying application...'
-                // Example: sh 'deploy.sh' or any other deployment command
+                // Example: bat 'deploy.bat' or any other deployment command
             }
         }
     }
 
     post {
         success {
-            // Actions to take on successful build (e.g., notify or clean up)
             echo 'Build completed successfully!'
         }
         failure {
-            // Actions to take on failed build (e.g., notify failure)
             echo 'Build failed!'
         }
         always {
-            // Clean up or other necessary actions
             echo 'Cleaning up...'
         }
     }
