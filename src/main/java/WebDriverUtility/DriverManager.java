@@ -30,7 +30,7 @@ public final class DriverManager {
 		if (getDriver() == null) {
 			switch (ConfigurationManager.getKeyValue(ConfigEnumUtility.browserType)) {
 			case "chrome":
-				WebDriverManager.chromedriver().driverVersion("132.0.6834.83").setup();
+				WebDriverManager.chromedriver().driverVersion("131.0.6834.83").setup();
 				driverThread.set(new ChromeDriver());
 				break;
 			case "edge":
