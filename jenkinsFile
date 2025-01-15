@@ -6,6 +6,7 @@ pipeline {
         SONARQUBE_URL = 'http://localhost:9000'
         SONARQUBE_TOKEN = credentials('SonarQubeToken')
         GIT_TOKEN = credentials('Githubtoken')
+        EMAIL_RECIPIENTS = 'recipient@example.com' // Replace with the desired email address
     }
 
     stages {
@@ -57,9 +58,34 @@ pipeline {
     post {
         success {
             echo 'Build completed successfully!'
+
+            // Send an email notification on success
+            emailext(
+                subject: "Build Successful: ${currentBuild.fullDisplayName} - Random Subject ${UUID.randomUUID().toString().take(8)}",
+                body: """
+                <p>The Jenkins build <b>${currentBuild.fullDisplayName}</b> has completed successfully.</p>
+                <p>For more details, check the Jenkins console output at <a href="${env.BUILD_URL}">${env.BUILD_URL}</a>.</p>
+                <p>Regards,<br>Automated Jenkins Build</p>
+                """,
+                to: "${EMAIL_RECIPIENTS}",
+                attachLog: true, // Attach the Jenkins console log to the email
+                attachmentsPattern: '**/target/*.html' // Attach build report (update this path if necessary)
+            )
         }
         failure {
             echo 'Build failed!'
+
+            // Send an email notification on failure
+            emailext(
+                subject: "Build Failed: ${currentBuild.fullDisplayName} - Random Subject ${UUID.randomUUID().toString().take(8)}",
+                body: """
+                <p>The Jenkins build <b>${currentBuild.fullDisplayName}</b> has failed.</p>
+                <p>For more details, check the Jenkins console output at <a href="${env.BUILD_URL}">${env.BUILD_URL}</a>.</p>
+                <p>Regards,<br>Automated Jenkins Build</p>
+                """,
+                to: "${EMAIL_RECIPIENTS}",
+                attachLog: true
+            )
         }
         always {
             echo 'Cleaning up...'
