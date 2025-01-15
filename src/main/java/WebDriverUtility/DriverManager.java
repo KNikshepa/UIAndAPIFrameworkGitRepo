@@ -8,6 +8,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 
 import ConfigurationUtility.ConfigEnumUtility;
 import ConfigurationUtility.ConfigurationManager;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public final class DriverManager {
 
@@ -29,9 +30,11 @@ public final class DriverManager {
 		if (getDriver() == null) {
 			switch (ConfigurationManager.getKeyValue(ConfigEnumUtility.browserType)) {
 			case "chrome":
+				WebDriverManager.chromedriver().setup();
 				driverThread.set(new ChromeDriver());
 				break;
 			case "edge":
+				WebDriverManager.chromedriver().setup();
 				driverThread.set(new EdgeDriver());
 				break;
 			default:
