@@ -27,7 +27,7 @@ pipeline {
             steps {
                 script {
                     // Ensure the SonarQube name matches the configured name in Jenkins
-                    withSonarQubeEnv('SonarQube') {
+                    withSonarQubeEnv('SonarQubeToken') {
                         bat """
                         mvn clean verify sonar:sonar \
                           -Dsonar.projectKey=UIAndAPIAutomationWithSonar \
