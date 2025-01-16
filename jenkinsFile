@@ -60,15 +60,14 @@ pipeline {
 
             // Send an email notification on success
             emailext(
-                subject: "Build Successful: ${currentBuild.fullDisplayName} - Random Subject ${UUID.randomUUID().toString().take(8)}",
+                subject: "$PROJECT_NAME - Build # $BUILD_NUMBER - SUCCESS!",
                 body: """
-                <p>The Jenkins build <b>${currentBuild.fullDisplayName}</b> has completed successfully.</p>
-                <p>For more details, check the Jenkins console output at <a href="${env.BUILD_URL}">${env.BUILD_URL}</a>.</p>
+                <p>The Jenkins build <b>$PROJECT_NAME - Build # $BUILD_NUMBER</b> has completed successfully.</p>
+                <p>For more details, check the Jenkins console output at <a href="$BUILD_URL">$BUILD_URL</a>.</p>
                 <p>Regards,<br>Automated Jenkins Build</p>
                 """,
-                to: "${env.EMAIL_RECIPIENTS}",  // Referring to the globally defined email recipient
                 attachLog: true, // Attach the Jenkins console log to the email
-                attachmentsPattern: '**/target/*.html' // Attach build report (update this path if necessary)
+                attachmentsPattern: '**/target/*.html' // Attach build report (if necessary)
             )
         }
         failure {
@@ -76,13 +75,12 @@ pipeline {
 
             // Send an email notification on failure
             emailext(
-                subject: "Build Failed: ${currentBuild.fullDisplayName} - Random Subject ${UUID.randomUUID().toString().take(8)}",
+                subject: "$PROJECT_NAME - Build # $BUILD_NUMBER - FAILURE!",
                 body: """
-                <p>The Jenkins build <b>${currentBuild.fullDisplayName}</b> has failed.</p>
-                <p>For more details, check the Jenkins console output at <a href="${env.BUILD_URL}">${env.BUILD_URL}</a>.</p>
+                <p>The Jenkins build <b>$PROJECT_NAME - Build # $BUILD_NUMBER</b> has failed.</p>
+                <p>For more details, check the Jenkins console output at <a href="$BUILD_URL">$BUILD_URL</a>.</p>
                 <p>Regards,<br>Automated Jenkins Build</p>
                 """,
-                to: "${env.EMAIL_RECIPIENTS}",  // Referring to the globally defined email recipient
                 attachLog: true
             )
         }
